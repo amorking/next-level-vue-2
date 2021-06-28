@@ -231,6 +231,24 @@
       "date": "",
       "time": "5:00",
       "attendees": []
+    },
+    {
+      "id": 3075497,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "Puppy Picnic",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
