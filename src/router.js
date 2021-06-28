@@ -14,7 +14,8 @@ const router = new Router({
     {
       path: '/',
       name: 'event-list',
-      component: EventList
+      component: EventList,
+      props: true
     },
     {
       path: '/event/create',
@@ -25,7 +26,9 @@ const router = new Router({
       path: '/event/:id',
       name: 'event-show',
       component: EventShow,
+      //router에서 props를 true로 설정하면 route.params가 컴포넌트의 props가 된다.
       props: true,
+      //이동될 route에 hook을 걸어준다.
       beforeEnter(to, from, next) {
         store.dispatch('event/fetchEvent', to.params.id).then(event => {
           to.params.event = event
@@ -42,7 +45,7 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach(() => {
-  NProgress.done
+  NProgress.done()
 })
 
 export default router
